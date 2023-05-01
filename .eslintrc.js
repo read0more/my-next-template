@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['next', 'prettier'],
-  plugins: ['prettier'],
+  extends: ['next/core-web-vitals', 'prettier'],
+  plugins: ['simple-import-sort', 'unused-imports', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
     'import/extensions': ['error', 'never', { css: 'always' }],
@@ -15,6 +15,9 @@ module.exports = {
         ],
       },
     ],
+    'no-unused-vars': ['error'],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
   ignorePatterns: ['./.yarn'],
   settings: {
